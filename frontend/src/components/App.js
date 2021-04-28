@@ -35,10 +35,34 @@ class App extends React.Component {
       <div>
         <header>Kanban Board</header>
         <div>
-          <Bucket bucketName={'Todo'} items={this.state.todo}/>
-          <Bucket bucketName={'In Progress'} items={this.state.progress}/>
-          <Bucket bucketName={'In Review'} items={this.state.review}/>
-          <Bucket bucketName={'Complete'} items={this.state.complete}/>
+          <Bucket
+            bucketName={'Todo'}
+            items={this.state.todo}
+            addTask={addTask}
+            deleteTask={deleteTask}
+            updateTask={updateTask}
+          />
+          <Bucket
+            bucketName={'In Progress'}
+            items={this.state.progress}
+            addTask={addTask}
+            deleteTask={deleteTask}
+            updateTask={updateTask}
+          />
+          <Bucket
+            bucketName={'In Review'}
+            items={this.state.review}
+            addTask={addTask}
+            deleteTask={deleteTask}
+            updateTask={updateTask}
+          />
+          <Bucket
+            bucketName={'Complete'}
+            items={this.state.complete}
+            addTask={addTask}
+            deleteTask={deleteTask}
+            updateTask={updateTask}
+          />
         </div>
       </div>
     );
